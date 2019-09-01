@@ -87,9 +87,9 @@
 		//Countdown
 		
         $('.countdown').downCount({
-            date: '02/11/2020 08:00:00'
+            date: '02/25/2020 08:00:00'
         }, function () {
-            alert('Bienvenidos al festival mas grande de emprendimiento de Bogotá!');
+            alert('Se acabo el festival mas grande de emprendimiento de Bogotá, pero regresa otra vez en 2021!');
         });
 
 		
