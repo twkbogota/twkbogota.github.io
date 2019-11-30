@@ -4,7 +4,7 @@
 /* Editable entries are bellow */
 
 $send_to = "info@bogotastartupweek.com";
-$send_subject = "BOGOWEEK Question";
+$send_subject = "BOGOWEEK Question ";
 
 
 
