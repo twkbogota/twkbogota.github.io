@@ -1,0 +1,93 @@
+<div class="content__inner">
+	<div class="section full-height over-y-scroll" id="boxscroll-5">
+		<div class="section" id="boxscroll-in-5">
+			<div class="section padding-top-big">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<h2 class="content__title">mantente informado</h2>
+						</div>
+						<div class="col-lg-4 mt-3">
+							<h3 class="content__subtitle">¿No encontraste lo que estás buscando?</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section padding-top padding-bottom-big">
+				<div class="container">
+					<div class="row">
+						<div class="offset-md-3 col-md-9">
+							<h4>contáctanos</h4>
+							<div class="title-page-line mt-4 mb-5"></div>
+						</div>
+						<div class="col-lg-3">
+							<h6>mande un mensaje</h6>
+						</div>
+						<div class="col-lg-9 mt-4 mt-lg-0">
+							<form id="ajax-form" action="https://formspree.io/info@bogotastartupweek.com" method="post">
+								<div class="row">
+									<div class="col-lg-6">
+										<label for="name"> <span class="error" id="err-name">por favor ingresa tu nombre</span>
+										</label>
+										<input name="name" id="name" type="text" placeholder="Su nombre: *" required />
+									</div>
+									<div class="col-lg-6 mt-4 mt-lg-0">
+										<label for="email"> <span class="error" id="err-email">por favor ingresa tu correo electrónico</span><span class="error" id="err-emailvld">el correo no tiene el formato correcto</span>
+										</label>
+										<input name="_replyto" id="email" type="text" placeholder="Correo electrónico: *" required />
+									</div>
+									<input type="hidden" name="_subject" value="BOGOWEEK Website Question" />
+									<div class="col-lg-12 mt-4">
+										<label for="message"></label>
+										<textarea name="message" id="message" placeholder="Cuentanos todo" required></textarea>
+									</div>
+									<input type="text" name="_gotcha" style="display:none" />
+									
+									<div class="col-lg-12 mt-4">
+										<div id="button-con">
+											<button type="submit"><span>ingresa</span>
+											</button>
+										</div>
+									</div>
+									<div class="col-lg-12">
+										<div class="error" id="err-form"><span>Hay un problema validando la forma, por favor revisa!</span>
+										</div>
+										<div class="error" id="err-timedout">La conexion al servidor ha fallado!</div>
+										<div class="error" id="err-state"></div>
+										<div id="ajaxsuccess">Enviado exitosamente!!</div>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="col-lg-3 mt-5">
+							<h6>contactos</h6>
+						</div>
+						<div class="col-lg-3 mt-4 mt-lg-5">
+							<p>info@bogotastartupweek.com</p>
+						</div>
+						<div class="col-lg-3 mt-4 mt-lg-5">
+							<p><a href="https://wa.me/573208974074" target="_blank">WhatsApp: +57 320 897 4074</a></p>
+						</div>
+						<div class="col-lg-3 mt-4 mt-lg-5">
+							<p>Bogotá, Colombia</p>
+						</div>
+						<div class="col-lg-3 mt-5">
+							<h6>subscribete</h6>
+						</div>
+						<div class="col-lg-9 mt-4 mt-lg-5">
+							<div class="subscribe">
+								<input type="text" placeholder="subscribe" />
+								<button data-lang="en"><span class="fa-long-arrow-right"></span>
+								</button>
+							</div>
+							<div class="subscribe-text">
+								<p>* No compartimos su información con nadie.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			{% include footer.html %}
+		</div>
+	</div>
+</div>

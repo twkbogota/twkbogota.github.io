@@ -1,8 +1,7 @@
-<!DOCTYPE html>
-<html lang="en"><head>
+<head>
 	<!-- Basic Page Needs -->
 	<meta charset="utf-8">
-	<title>About | Techstars Startup Week Bogotá</title>
+	<title>{{ page.title }} | {{ site.title }}</title>
 	<meta name="description" content="Techstars Startup Week Bogotá (BOGOWEEK) es una celebración de todo el ecosistema emprendedor en Bogotá, es el evento gratuito más grande de su tipo en el mundo organizado por la comunidad, para la comunidad. Celebre el ecosistema emprendedor de Bogotá y ayuda a construir la cultura de innovación de la ciudad. ¡No te pierdas #BOGOWEEK2020!" />
 	<meta name="author" content="OrangeUP">
 	<meta name="keywords" content="crecimiento empresarial extraordinario, crecimiento, empresarial, extraordinario, empresas, Bogota, Colombia, mentalidad y cultura, fomentar, contribuir, incentivar instrumentos de apoyo, programas de apoyo" />
@@ -34,76 +33,11 @@
 	<link rel="stylesheet" href="assets/css/jquery.webui-popover.css" />
 	<link rel="stylesheet" href="assets/css/style.css" />
 	<link rel="stylesheet" href="assets/css/jquery.fancybox.min.css" />
-	<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Techstars Startup Week Bogotá" />	
 	<script>
 		document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root:{--tmp-var: bold;}",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("");
 	</script>
-	
-</head><body><header class="site-header" role="banner">
-
-  <div class="wrapper"><a class="site-title" rel="author" href="/">Techstars Startup Week Bogotá</a><nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-        <label for="nav-trigger">
-          <span class="menu-icon">
-            <svg viewBox="0 0 18 15" width="18px" height="15px">
-              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
-            </svg>
-          </span>
-        </label>
-
-        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/">BOGOWEEK</a></div>
-      </nav></div>
-</header>
-<main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <article class="post">
-
-  <header class="post-header">
-    <h1 class="post-title">About</h1>
-  </header>
-
-  <div class="post-content">
-    <p>This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at <a href="https://jekyllrb.com/">jekyllrb.com</a></p>
-
-<p>You can find the source code for Minima at GitHub:
-<a href="https://github.com/jekyll">jekyll</a> /
-<a href="https://github.com/jekyll/minima">minima</a></p>
-
-<p>You can find the source code for Jekyll at GitHub:
-<a href="https://github.com/jekyll">jekyll</a> /
-<a href="https://github.com/jekyll/jekyll">jekyll</a></p>
-
-
-  </div>
-
-</article>
-
-      </div>
-    </main><div class="section padding-top padding-bottom-big background-dark footer">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<a href="//bogotastartupweek.com"><img src="assets/img/bogoweek.png" height="100" alt="logo"> </a>
-				<p>Techstars Startup Week Bogotá</p>
-				<h6 class="mt-5 mb-3">Contáctanos:</h6>
-				<p>info@bogotastartupweek.com</p>
-				<p>WhatsApp: +57 320 897 4074</p>
-			</div>
-			<div class="col-md-12 mt-5 mb-5">
-				<div class="title-page-line"></div>
-			</div>
-			<div class="col-md-12">
-				<p><small>© 2019 Techstars Startup Week Bogotá. Todos los derechos reservados.</small>
-				</p>
-				<p class="padding-top-bottom"><i style="color:rgb(246, 166, 35);" class="fa fa-bolt" aria-hidden="true"></i> Powered by
-					<br>
-					<a href="https://www.bloomshift.com/?utm_source=bogotastartupweek.com&amp;utm_medium=website&amp;utm_campaign=referral&amp;utm_content=homepage" target="_blank">
-						<img height="300px" src="https://www.bloomshift.com/wp-content/uploads/bloom-banner-1901.png" alt="BloomShift™">
-					</a>
-				</p>
-			</div>
-		</div>
-	</div>
-</div></body>
-
-</html>
+	<meta name="referrer" content="origin" />
+	{% if jekyll.environment == "production" %}
+		{% include gtag1.html %}
+	{% endif %}
+</head>
