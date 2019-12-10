@@ -1868,11 +1868,11 @@ a[href*='tel'], a[href*='mailto'] {
 	color: #f09922;
 }
 
-.block-address .icon-rect.icon-white[class*='facebook'], .block-address .icon-rect.icon-white[class*='twitter'], .block-address .icon-rect.icon-white[class*='linkedin'], .block-address .icon-rect.icon-white[class*='youtube'] {
+.block-address .icon-rect.icon-white[class*='facebook'], .block-address .icon-rect.icon-white[class*='twitter'], .block-address .icon-rect.icon-white[class*='instagram'], .block-address .icon-rect.icon-white[class*='youtube'] {
 	color: #ffffff;
 }
 
-.block-address .icon-rect.icon-white[class*='facebook']:hover, .block-address .icon-rect.icon-white[class*='twitter']:hover, .block-address .icon-rect.icon-white[class*='linkedin']:hover, .block-address .icon-rect.icon-white[class*='youtube']:hover {
+.block-address .icon-rect.icon-white[class*='facebook']:hover, .block-address .icon-rect.icon-white[class*='twitter']:hover, .block-address .icon-rect.icon-white[class*='instagram']:hover, .block-address .icon-rect.icon-white[class*='youtube']:hover {
 	color: #ffffff;
 }
 
@@ -2600,11 +2600,11 @@ a.icon[class*='youtube']:hover {
 	transition: .3s ease-out all;
 }
 
-.icon-rect.icon-gray-900[class*='facebook'], .icon-rect.icon-gray-900[class*='twitter'], .icon-rect.icon-gray-900[class*='linkedin'], .icon-rect.icon-gray-900[class*='youtube'] {
+.icon-rect.icon-gray-900[class*='facebook'], .icon-rect.icon-gray-900[class*='twitter'], .icon-rect.icon-gray-900[class*='instagram'], .icon-rect.icon-gray-900[class*='youtube'] {
 	color: #ffffff;
 }
 
-.icon-rect.icon-gray-900[class*='facebook']:hover, .icon-rect.icon-gray-900[class*='twitter']:hover, .icon-rect.icon-gray-900[class*='linkedin']:hover, .icon-rect.icon-gray-900[class*='youtube']:hover {
+.icon-rect.icon-gray-900[class*='facebook']:hover, .icon-rect.icon-gray-900[class*='twitter']:hover, .icon-rect.icon-gray-900[class*='instagram']:hover, .icon-rect.icon-gray-900[class*='youtube']:hover {
 	color: #ffffff;
 }
 
@@ -2649,11 +2649,11 @@ a.icon[class*='youtube']:hover {
 	transition: .3s ease-out all;
 }
 
-.icon-rect.icon-white[class*='facebook'], .icon-rect.icon-white[class*='twitter'], .icon-rect.icon-white[class*='linkedin'], .icon-rect.icon-white[class*='youtube'] {
+.icon-rect.icon-white[class*='facebook'], .icon-rect.icon-white[class*='twitter'], .icon-rect.icon-white[class*='instagram'], .icon-rect.icon-white[class*='youtube'] {
 	color: #15162b;
 }
 
-.icon-rect.icon-white[class*='facebook']:hover, .icon-rect.icon-white[class*='twitter']:hover, .icon-rect.icon-white[class*='linkedin']:hover, .icon-rect.icon-white[class*='youtube']:hover {
+.icon-rect.icon-white[class*='facebook']:hover, .icon-rect.icon-white[class*='twitter']:hover, .icon-rect.icon-white[class*='instagram']:hover, .icon-rect.icon-white[class*='youtube']:hover {
 	color: #ffffff;
 }
 
@@ -3944,11 +3944,11 @@ textarea.form-input {
 	border-bottom: 2px solid #f4f2ee;
 }
 
-.post-single-social .icon-rect.icon-white[class*='facebook'], .post-single-social .icon-rect.icon-white[class*='twitter'], .post-single-social .icon-rect.icon-white[class*='linkedin'], .post-single-social .icon-rect.icon-white[class*='youtube'] {
+.post-single-social .icon-rect.icon-white[class*='facebook'], .post-single-social .icon-rect.icon-white[class*='twitter'], .post-single-social .icon-rect.icon-white[class*='instagram'], .post-single-social .icon-rect.icon-white[class*='youtube'] {
 	color: #ffffff;
 }
 
-.post-single-social .icon-rect.icon-white[class*='facebook']:hover, .post-single-social .icon-rect.icon-white[class*='twitter']:hover, .post-single-social .icon-rect.icon-white[class*='linkedin']:hover, .post-single-social .icon-rect.icon-white[class*='youtube']:hover {
+.post-single-social .icon-rect.icon-white[class*='facebook']:hover, .post-single-social .icon-rect.icon-white[class*='twitter']:hover, .post-single-social .icon-rect.icon-white[class*='instagram']:hover, .post-single-social .icon-rect.icon-white[class*='youtube']:hover {
 	color: #ffffff;
 }
 
