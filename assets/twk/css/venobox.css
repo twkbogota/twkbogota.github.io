@@ -20,11 +20,11 @@ body{
     transition: opacity .25s ease-in-out, width .2s ease-in-out;
     -moz-transition: opacity .25s ease-in-out, width .2s ease-in-out;
     -webkit-transition: opacity .25s ease-in-out, width .2s ease-in-out;
-	
-	 
+    
+     
 }
 .vbox-overlay-new{
-	 width: 81.5%;
+     width: 81.5%;
 }
 .vbox-video-content {
  position: fixed;
@@ -40,11 +40,11 @@ body{
  -ms-transition: all .2s ease-in-out;
  }
  .visible {
-	transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
  -moz-transition: all .2s ease-in-out;
  -webkit-transition: all .2s ease-in-out;
  -ms-transition: all .2s ease-in-out;
-	width: 18.5%;
+    width: 18.5%;
 }
 .relativo{
     float: left;
@@ -217,7 +217,7 @@ body{
 */
 /* ----- navigation ----- */
 .vbox-close {
-    color: #fff;    cursor: pointer;    display: block;    font-size: 2em;    overflow: hidden;    position: absolute;	right: 10px;    top: 10px;
+    color: #fff;    cursor: pointer;    display: block;    font-size: 2em;    overflow: hidden;    position: absolute;  right: 10px;    top: 10px;
 }
 .vbox-info {
     color: #fff;
@@ -336,12 +336,12 @@ body{
 @media (max-width: 600px) {
     .vbox-overlay-new {
     width: 0;
-	}
-	.visible {
-		width: 100%;
+    }
+    .visible {
+        width: 100%;
 }
 .vbox-info {
-	position:fixed;
+    position:fixed;
 }
 }
 @media (max-width: 568px) {
