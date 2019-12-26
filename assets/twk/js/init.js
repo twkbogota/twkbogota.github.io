@@ -288,6 +288,13 @@ jQuery( document ).ready(function( $ ) {
 	/******* triangle effect *******/	 
 	$("body").append('<div class="animate-canvas"><canvas id="demo-canvas"></canvas></div>');
 	/******* triangle effect *******/	
-	
+		
+	panel();
 });
 
+function panel(){
+
+	jQuery('.show-panel').click(function () {
+		jQuery('.panel').slideToggle();
+	});
+}
