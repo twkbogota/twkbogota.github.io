@@ -1,0 +1,38 @@
+<body id="top" data-spy="scroll" data-target=".header" data-offset="80">
+	{% if jekyll.environment == "production" %}
+		{% include gtag2.html %}
+	{% endif %}
+	
+	{% include twk_preloader.html %}
+
+	{% include twk_header.html %}
+	
+	{% include twk_home.html %}
+	
+	{% include twk_about.html %}
+   
+    {% include twk_features.html %}
+	
+    {% include twk_schedule.html %}
+    
+    {% include twk_speakers.html %}
+	
+	{% include twk_pricing.html %}
+    
+    {% if jekyll.environment == "development" %}
+    	{% include twk_register.html %}
+    {% endif %}
+
+    {% include twk_sponsors.html %}
+
+    {% include twk_subscribe.html %}
+
+    {% include twk_contact.html %}
+
+    {% include twk_footer.html %}
+	
+</div>
+
+    {% include twk_js.html %}
+	
+</body>
