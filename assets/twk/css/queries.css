@@ -215,9 +215,10 @@ float: none;
 }
 .navbar-brand{
     padding:12px;
+    max-width: 86%;
 }
 .navbar-brand img{
-    width:70%;
+    width:40%;
 }
 .navbar-default .navbar-toggle{
     border:none;
