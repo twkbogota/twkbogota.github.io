@@ -215,10 +215,10 @@ float: none;
 }
 .navbar-brand{
     padding:12px;
-    max-height: 45px;
+    max-width: 167px;
 }
 .navbar-brand img{
-    max-height: 45px;
+    max-width: 167px;
 }
 .navbar-default .navbar-toggle{
     border:none;
