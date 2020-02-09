@@ -12034,7 +12034,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .lg-outer .lg-item {
-	background: url("../images/loading.gif") no-repeat scroll center center transparent;
+	background: url("/assets/tsw/img/loading.gif") no-repeat scroll center center transparent;
 	display: none !important;
 }
 
@@ -12766,7 +12766,7 @@ html:not(.ie-11):not(.ios) .parallax-disabled {
 }
 
 .slick-loading .slick-list {
-	background: #ffffff slick-image-url("../images/ajax-loader.gif") center center no-repeat;
+	background: #ffffff slick-image-url("/assets/tsw/img/ajax-loader.gif") center center no-repeat;
 }
 
 .slick-slider .slick-track,
