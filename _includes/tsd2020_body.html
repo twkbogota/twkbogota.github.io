@@ -1,0 +1,64 @@
+<body>
+    <div class="preloader">
+        <div class="preloader-body">
+            <div class="cssload-container">
+                <div class="cssload-speeding-wheel"></div>
+            </div>
+            <p>Cargando...</p>
+        </div>
+    </div>
+    <div class="page">
+        <!-- Section Header Default-->
+        <header class="section page-header">
+            <!--RD Navbar-->
+            <div class="rd-navbar-wrap">
+                {% include twk2020_sponsors_nav.html %}
+            </div>
+        </header>
+        <!-- Breadcrumbs-->
+        <section class="breadcrumbs-custom bg-image context-dark" style="background-image: url({{ site.url }}/assets/tsw/img/bg-breadcrumbs-01-1894x424.jpg);">
+            <div class="container">
+                <ul class="breadcrumbs-custom-path">
+                    <li><a href="/">Inicio</a></li>
+                    <li class="active">Calendario</li>
+                </ul>
+                <h3 class="breadcrumbs-custom-title">Techstars Startup Digest</h3>
+            </div>
+        </section>
+        <!-- Intro-->
+        <section class="section section-lg bg-default text-center">
+            <div class="container">
+                <div class="block-about">
+                    <div class="block-about-content">
+                        <h6>Esté donde necesita estar, lo ayudaremos a reducir el ruido.</h6>
+                        <h3>Encuentra eventos locales</h3>
+                        <p>Los curadores del Techstars Startup Digest son incansables en su búsqueda para encontrar y compartir los mejores eventos en su área. Cada semana, recopilan estos eventos y se los envían por correo electrónico.</p>
+                        <div class="group" style="margin-bottom:20px;"><a class="button button-primary" href="#" data-triangle=".button-overlay" target="_blank"><span>Enviar evento</span><span class="button-overlay"></span></a></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="calx-emd-cal" data-calendar="yV244488" data-configure="true" data-title="Techstars%20Startup%20Digest%20Bogot%C3%A1" data-show-title="true" data-show-nav-buttons="true" data-show-date="true" data-show-date-toogle="true" data-show-follow-button="true" data-show-timezone="true" data-theme="1" data-first-day="0" data-datetimeformat="2" data-default-view="month" data-use-custom-popup="true"></div><script type="text/javascript">(function(){var e = document.createElement("script");e.type = "text/javascript";e.async = true;e.src = "https://calendarx.com/js/emd.cal.init.min.js";e.className = "calendarx-script";document.getElementsByTagName("body")[0].appendChild(e);})();</script>
+                </div>
+            </div>
+        </section>
+        <!-- Divider-->
+        <div class="divider divider-gray-900 text-center"></div>
+        {% include tsw_footer.html %}
+    </div>
+    <div class="snackbars" id="form-output-global"></div>
+    <div class="block-with-svg-gradients">
+        <svg xmlns="https://www.w3.org/2000/svg">
+            <defs>
+                <lineargradient id="svg-gradient-primary" x1="0%" y1="100%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:rgb(130,46,168);stop-opacity:1"></stop>
+                    <stop offset="100%" style="stop-color:rgb(217,14,144);stop-opacity:1"></stop>
+                </lineargradient>
+            </defs>
+        </svg>
+    </div>
+    <script src="{{ site.url }}/assets/tsw/js/core.min.js"></script>
+  <script src="{{ site.url }}/assets/tsw/js/script.js"></script>
+    <!--EVENTBRITE-->
+    <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+    <script type="text/javascript" src="{{ site.url }}/assets/twk/js/eventbrite.js"></script>
+</body>
