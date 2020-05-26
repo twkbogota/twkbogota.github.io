@@ -11,11 +11,11 @@ title: Startup Weekend Bogotá
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="{{ site.url }}/assets/images/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Barlow%7CBarlow+Condensed:300,400,500,600,700,900">
-		<link rel="stylesheet" href="/assets/tsw/css/bootstrap.css">
-		<link rel="stylesheet" href="/assets/tsw/css/fonts.css">
-		<link rel="stylesheet" href="/assets/tsw/css/style.css">
+		<link rel="stylesheet" href="{{ site.url }}/assets/tsw/css/bootstrap.css">
+		<link rel="stylesheet" href="{{ site.url }}/assets/tsw/css/fonts.css">
+		<link rel="stylesheet" href="{{ site.url }}/assets/tsw/css/style.css">
 		<style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
 		{% if jekyll.environment == "production" %}
 			{% include gtag1.html %}
@@ -46,7 +46,7 @@ title: Startup Weekend Bogotá
 					                <!--RD Navbar Brand-->
 					                <div class="rd-navbar-brand">
 					                    <!--Brand-->
-										<a class="brand" href="https://bogotastartupweek.com/tsw">
+										<a class="brand" href="{{ site.url }}/tsw">
 											<img class="brand-logo-dark" src="{{ site.url }}/assets/tsw/img/logo-tsw-bogota-c-h.png" srcset="{{ site.url }}/assets/tsw/img/logo-tsw-bogota-c-h.png 2x" alt="Techstars Startup Weekend Bogotá" />
 											<img class="brand-logo-light" src="{{ site.url }}/assets/tsw/img/logo-tsw-bogota-w-h.png" srcset="{{ site.url }}/assets/tsw/img/logo-tsw-bogota-w-h.png 2x" alt="Techstars Startup Weekend Bogotá" />
 										</a>
@@ -60,7 +60,7 @@ title: Startup Weekend Bogotá
 					            </div>
 					            <!-- RD Navbar Collapse-->
 					            <div class="rd-navbar-collapse">
-					                <a class="button button-primary" href="/tsw" data-triangle=".button-overlay" target="_blank"><span>¿El proximo?</span><span class="button-overlay"></span></a>
+					                <a class="button button-primary" href="{{ site.url }}/tsw" data-triangle=".button-overlay" target="_blank"><span>¿El proximo?</span><span class="button-overlay"></span></a>
 					            </div>
 					        </div>
 					    </div>
@@ -68,10 +68,10 @@ title: Startup Weekend Bogotá
 	            </div>
 	        </header>
 	        <!-- Breadcrumbs-->
-	        <section class="breadcrumbs-custom bg-image context-dark" style="background-image: url(/assets/tsw/img/bg-breadcrumbs-01-1894x424.jpg);">
+	        <section class="breadcrumbs-custom bg-image context-dark" style="background-image: url({{ site.url }}/assets/tsw/img/bg-breadcrumbs-01-1894x424.jpg);">
 	            <div class="container">
 	                <ul class="breadcrumbs-custom-path">
-	                    <li><a href="/">Archivo</a></li>
+	                    <li><a href="#">Archivo</a></li>
 	                    <li class="active">Techstars Startup Weekend</li>
 	                </ul>
 	                <h3 class="breadcrumbs-custom-title">Febrero 2020</h3>
