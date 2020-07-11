@@ -212,7 +212,7 @@ var theme = function () {
         // CountDown
         initCountDown: function () {
             var austDay = new Date();
-            austDay = new Date(2020, 6 - 1, 11);
+            austDay = new Date(2020, 8 - 1, 28);
             $('#defaultCountdown').countdown({until: austDay});
             $('#year').text(austDay.getFullYear());
         },
