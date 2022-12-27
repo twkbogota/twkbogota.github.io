@@ -1,72 +1,131 @@
-(function($) { "use strict";
+/*
 
-	function Selector_Cache() {
-		var collection = {};
+Script  : Contact Form
+Version : 1.0
+Author  : Surjith S M
+URI     : http://themeforest.net/user/surjithctly
 
-		function get_from_cache( selector ) {
-			if ( undefined === collection[ selector ] ) {
-				collection[ selector ] = $( selector );
-			}
+Copyright © All rights Reserved
+Surjith S M / @surjithctly
 
-			return collection[ selector ];
-		}
+*/
 
-		return { get: get_from_cache };
-	}
+$(function() {
 
-	var selectors = new Selector_Cache();
-	
-		jQuery(document).ready(function ($) { // wait until the document is ready
-			$('#send').on('click', function(){ // when the button is clicked the code executes
-				$('.error').fadeOut('slow'); // reset the error messages (hides them)
+    "use strict";
 
-				var error = false; // we will set this true if the form isn't valid
 
-				var name = $('input#name').val(); // get the value of the input field
-				if(name == "" || name == " ") {
-					$('#err-name').fadeIn('slow'); // show the error message
-					error = true; // change the error state to true
-				}
+    /* ================================================
+   jQuery Validate - Reset Defaults
+   ================================================ */
 
-				var email_compare = /^([a-z0-9_.-]+)@([da-z.-]+).([a-z.]{2,6})$/; // Syntax to compare against input
-				var email = $('input#email').val(); // get the value of the input field
-				if (email == "" || email == " ") { // check if the field is empty
-					$('#err-email').fadeIn('slow'); // error - empty
-					error = true;
-				}else if (!email_compare.test(email)) { // if it's not empty check the format against our email_compare variable
-					$('#err-emailvld').fadeIn('slow'); // error - not right format
-					error = true;
-				}
+    $.validator.setDefaults({
+        ignore: [],
+        highlight: function(element) {
+            $(element).closest('.form-group').addClass('has-danger');
+            $(element).addClass('form-control-danger');
+        },
+        unhighlight: function(element) {
+            $(element).closest('.form-group').removeClass('has-danger');
+            $(element).removeClass('form-control-danger');
+        },
+        errorElement: 'div',
+        errorClass: 'form-control-feedback',
+        errorPlacement: function(error, element) {
+            if (element.parent('.input-group').length || element.parent('label').length) {
+               // error.insertAfter(element.parent());
+            } else {
+               // error.insertAfter(element);
+            }
+        }
+    });
 
-				if(error == true) {
-					$('#err-form').slideDown('slow');
-					return false;
-				}
+    /* 
+    VALIDATE
+    -------- */
 
-				var data_string = $('#ajax-form').serialize(); // Collect data from form
+    var $phpcontactform = $("#phpcontactform");
+    var $jscontactbtn = $("#js-contact-btn");
+    var $jscontactresult = $("#js-contact-result");
 
-				$.ajax({
-					type: "POST",
-					url: $('#ajax-form').attr('action'),
-					data: data_string,
-					timeout: 6000,
-					error: function(request,error) {
-						if (error == "timeout") {
-							$('#err-timedout').slideDown('slow');
-						}
-						else {
-							$('#err-state').slideDown('slow');
-							$("#err-state").html('An error occurred: ' + error + '');
-						}
-					},
-					success: function() {
-						$('#ajax-form').slideUp('slow');
-						$('#ajaxsuccess').slideDown('slow');
-					}
-				});
+    $phpcontactform.submit(function(e) {
+        e.preventDefault();
+    }).validate({
+        rules: {
+            name: "required",
+            email: {
+                required: true,
+                email: true
+            },
+            message: "required",
+        },
+        messages: {
+            name: "Your first name please",
+            email: "We need your email address",
+            message: "Please enter your message",
+        },
+        submitHandler: function(form) {
 
-				return false; // stops user browser being directed to the php file
-			}); // end click function
-		});
-		
-  })(jQuery); 
+            $jscontactbtn.attr("disabled", true);
+
+            /* 
+            CHECK PAGE FOR REDIRECT (Thank you page)
+            ---------------------------------------- */
+
+            var redirect = $phpcontactform.data('redirect');
+            var noredirect = false;
+            if (redirect == 'none' || redirect == "" || redirect == null) {
+                noredirect = true;
+            }
+
+            $jscontactresult.html('<p class="help-block">Please wait...</p>');
+
+            /* 
+            FETCH SUCCESS / ERROR MSG FROM HTML DATA-ATTR
+            --------------------------------------------- */
+
+            var success_msg = $jscontactresult.data('success-msg');
+            var error_msg = $jscontactresult.data('error-msg');
+
+            var dataString = $(form).serialize();
+
+            /* 
+             AJAX POST
+             --------- */
+
+            $.ajax({
+                type: "POST",
+                data: dataString,
+                url: "php/contact.php",
+                cache: false,
+                success: function(d) {
+                    if (d == 'success') {
+                        if (noredirect) {
+                            $phpcontactform[0].reset();
+                            $jscontactresult.fadeIn('slow').html('<div class="mt-3 help-block text-success">' + success_msg + '</div>').delay(3000).fadeOut('slow');
+                        } else {
+                            window.location.href = redirect;
+                        }
+                    } else {
+                        $jscontactresult.fadeIn('slow').html('<div class="mt-3 help-block text-danger">' + error_msg + '</div>').delay(3000).fadeOut('slow');
+                        if (window.console) {
+                            console.log('PHP Error: ' + d);
+                        }
+                    }
+                    $jscontactbtn.attr("disabled", false);
+                },
+                error: function(d) {
+                    $jscontactresult.fadeIn('slow').html('<div class="mt-3 help-block text-danger"> Cannot access Server</div>').delay(3000).fadeOut('slow');
+                    $jscontactbtn.attr("disabled", false);
+                    if (window.console) {
+                        console.error('JS Error: Please make sure you are running on a PHP Server');
+                    }
+
+                }
+            });
+            return false;
+
+        }
+    });
+
+})
