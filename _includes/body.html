@@ -1,0 +1,26 @@
+<body class="aoide">
+	{% if jekyll.environment == "production" %}
+		{% include gtag2.html %}
+	{% endif %}
+	<div class="loader">
+		<div class="loader__figure"></div>
+	</div>
+	<main>
+		{% include main.html %}
+		<!-- Primary Page Layout==================================================-->
+		<div class="content content--reveal">
+			{% include speakers.html %}
+			{% include agenda.html %}
+			{% include patrocinadores.html %}
+			{% include noticias.html %}
+			{% include informado.html %}
+			<button class="content__close"></button>
+		</div>
+		<div class="location-fixed">
+			<p>Varias locaciones en Bogotá, Colombia</p>
+		</div>
+		<div class="social-fixed"><a href="https://bogoweek.co/tw" target="_blank">twitter</a><a href="https://bogoweek.co/fb" target="_blank">facebook</a><a href="https://bogoweek.co/in" target="_blank">instagram</a>
+		</div>
+	</main>
+	{% include js.html %}
+</body>
